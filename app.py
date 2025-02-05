@@ -26,6 +26,20 @@ if "messages" not in st.session_state:
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
+
+
+
+# CSS to hide the footer and GitHub logo
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # Define model details
 models = {
     "deepseek-r1-distill-llama-70b": {"name": "deep seek", "developer": "DeepSeek"}
