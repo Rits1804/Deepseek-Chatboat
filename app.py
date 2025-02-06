@@ -91,11 +91,11 @@ if prompt := st.chat_input("Enter your prompt here..."):
 
         # Generate the response
         response_content = generate_chat_responses(chat_completion)
-        cleaned_response, reasoning = parse_reasoning(response_content)
+        # cleaned_response, reasoning = parse_reasoning(response_content)
 
         # Display the cleaned response
         with st.chat_message("assistant", avatar="🤖"):
-            st.write(cleaned_response)
+            st.write(response_content)
 
         # Append reasoning and full response to session_state.messages
         st.session_state.messages.append({"role": "assistant", "content": cleaned_response})
